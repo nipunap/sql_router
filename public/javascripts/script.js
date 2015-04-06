@@ -18,6 +18,12 @@ loginForm.config(function($routeProvider) {
     });
 });
 
+loginForm.run(function($rootScope, $templateCache) {
+    $rootScope.$on('$viewContentLoaded', function() {
+        $templateCache.removeAll();
+    });
+});
+
 // create the controller and inject Angular's $scope
 loginForm.controller('mainController', function($scope, $location) {
     $scope.login = $location.search('login');
