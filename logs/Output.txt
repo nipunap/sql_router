@@ -1,1 +1,2 @@
 
+xyz|select * from test|0.032|4
